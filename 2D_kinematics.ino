@@ -21,6 +21,7 @@ void setup() {
 void loop() {
   myservo1.write(10);
   myservo2.write(10);
+  //delay(20000);  
   inverseKinematics();
 }
 
@@ -48,7 +49,7 @@ void inverseKinematics() {
 
   rad_angle2=acos((sq(x)+ sq(y) - sq(L_1) - sq(L_2)) / (2*L_1*L_2));
   rad_angle1=atan(y / x) - atan((L_2*sin(rad_angle2)) / (L_1 + L_2*cos(rad_angle2)));
-  delay(1000);
+//  delay(1000);
 
   angle1=(rad_angle1*180)/pi;
   angle2=(rad_angle2*180)/pi;
